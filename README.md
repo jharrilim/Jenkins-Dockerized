@@ -20,9 +20,9 @@ function jenkins-recreate() {
 ## Repository Structure
 
 - [`JCasC/`]: Configuration files for [Jenkins Configurations as Code plugin]
-- [`hooks/`]: Jenkins [Hook Scripts]
+- [`Hooks/`]: Jenkins [Hook Scripts]
 
 [`JCasC/`]: ./JCasC/
 [Jenkins Configurations as Code plugin]: https://github.com/jenkinsci/configuration-as-code-plugin
-[`hooks/`]: ./hooks/
+[`Hooks/`]: ./Hooks/
 [Hook Scripts]: https://wiki.jenkins.io/display/JENKINS/Groovy+Hook+Script
