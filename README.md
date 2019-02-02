@@ -1,8 +1,16 @@
 # Jenkins - Dockerized
 
+## Getting Started
+
 ```sh
-docker run --name jenkins --detach --publish 8080:8080 --publish 50000:50000 --volume /path/to/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+docker build --tag my-jenkins --no-cache .
+docker run --name jenkins --detach --publish 8080:8080 --publish 50000:50000 --volume "$PWD/jenkins_home":/var/jenkins_home my-jenkins
+# Jenkins is running. Head to http://localhost:8080
+# see its logs:
+docker logs --follow jenkins
 ```
+
+## Development
 
 ```sh
 function jenkins-recreate() {
