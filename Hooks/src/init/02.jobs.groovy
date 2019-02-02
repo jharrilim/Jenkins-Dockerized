@@ -2,18 +2,16 @@ import jenkins.model.Jenkins
 import org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition
 import org.jenkinsci.plugins.workflow.job.WorkflowJob
 
-String jobDSL="""
+def jobDSL="""
 node {
-  stage("test"){
-   echo 'Hello World'
-  }
+    stage("test") {
+        foo 'Hello World'
+    }
 }
 """
 
-def job = new WorkflowJob(Jenkins.get(), "testJob")
-job.definition = new CpsFlowDefinition(jobDSL, true)
+def job = new WorkflowJob(Jenkins.get(), "my-test-job")
+job.definition = new CpsFlowDefinition(jobDSL)
 
 job.setConcurrentBuild(false)
 job.save()
-
-Jenkins.get().reload()
