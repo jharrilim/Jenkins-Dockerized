@@ -1,4 +1,4 @@
-# Jenkins Pipelines Test
+# Jenkins - Dockerized
 
 ```sh
 docker run --name jenkins --detach --publish 8080:8080 --publish 50000:50000 --volume /path/to/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
@@ -20,9 +20,9 @@ function jenkins-recreate() {
 ## Repository Structure
 
 - [`JCasC/`]: Configuration files for [Jenkins Configurations as Code plugin]
-- [`vars/`]: [Shared Library] variables
+- [`hooks/`]: Jenkins [Hook Scripts]
 
 [`JCasC/`]: ./JCasC/
 [Jenkins Configurations as Code plugin]: https://github.com/jenkinsci/configuration-as-code-plugin
-[`vars/`]: ./vars/
-[Shared Library]: https://jenkins.io/doc/book/pipeline/shared-libraries/
+[`hooks/`]: ./hooks/
+[Hook Scripts]: https://wiki.jenkins.io/display/JENKINS/Groovy+Hook+Script

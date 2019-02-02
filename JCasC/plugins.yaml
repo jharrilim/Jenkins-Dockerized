@@ -7,8 +7,6 @@ plugins:
   required:
     workflow-aggregator: 2.6
     blueocean: 1.10.2
-    git: 3.9.3
-    github-branch-source: 2.4.2
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"

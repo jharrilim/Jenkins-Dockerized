@@ -1,1 +1,6 @@
-/jenkins_home/
+.gitignore
+README.md
+Jenkinsfile
+
+vars/
+jenkins_home/

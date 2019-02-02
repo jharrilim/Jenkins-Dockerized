@@ -5,3 +5,5 @@ FROM jenkins/jenkins:lts
 COPY JCasC/*.yaml /var/jcasc_configs/
 ENV CASC_JENKINS_CONFIG="/var/jcasc_configs"
 RUN /usr/local/bin/install-plugins.sh configuration-as-code
+
+COPY hooks/init/*.groovy /usr/share/jenkins/ref/init.groovy.d/
