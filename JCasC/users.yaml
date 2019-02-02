@@ -1,0 +1,28 @@
+jenkins:
+  systemMessage: "Welcome to my Jenkins instance!"
+
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  mode: NORMAL
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  quietPeriod: 5
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+      - id: admin
+        password: ${ADMIN_PASSWORD:-password}
