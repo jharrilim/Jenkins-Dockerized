@@ -3,7 +3,7 @@ plugins {
     id 'java'
 }
 
-group 'com.github.poulad.jenkins'
+group 'jenkins'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'groovy'
@@ -33,14 +33,16 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.3.11'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.jenkins-ci.main:jenkins-core:2.23'
+    compile 'org.codehaus.groovy:groovy-all:2.5.5'
+    testCompile 'junit:junit:4.12'
+    compile 'org.jenkins-ci.main:jenkins-core:2.150'
 
     // Jenkins plugins
     compile group: 'org.jenkins-ci.plugins', name: 'credentials', version: '2.1.13', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'matrix-auth', version: '1.6', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-cps', version: '2.39', ext: 'jar'
+    compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-job', version: '2.31', ext: 'jar'
+
     compile group: 'org.apache.maven', name: 'maven-model', version: '3.3.9'
 
     testCompile group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.1'

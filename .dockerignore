@@ -4,3 +4,6 @@ Jenkinsfile
 
 vars/
 jenkins_home/
+
+Hooks/
+!Hooks/src/

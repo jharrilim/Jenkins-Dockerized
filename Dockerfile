@@ -8,4 +8,4 @@ RUN /usr/local/bin/install-plugins.sh configuration-as-code
 
 ## Copy Groovy Hook Scripts
 # https://wiki.jenkins.io/display/JENKINS/Groovy+Hook+Script
-COPY Hooks/init/*.groovy /usr/share/jenkins/ref/init.groovy.d/
+COPY Hooks/src/init/*.groovy /usr/share/jenkins/ref/init.groovy.d/

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="com.github.poulad.jenkins.init.main" target="1.8" />
+      <module name="jenkins.hooks.init.main" target="1.8" />
+      <module name="jenkins.hooks.jenkins-hook-scripts.main" target="1.8" />
+      <module name="jenkins.hooks.jenkins-hook-scripts.test" target="1.8" />
+      <module name="jenkins.jenkins-hook-scripts.main" target="1.8" />
+      <module name="jenkins.jenkins-hook-scripts.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
