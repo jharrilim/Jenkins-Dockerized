@@ -1,3 +1,7 @@
+println 'Jobs are configured using JCasC now. Skipping...'
+return
+
+
 import hudson.model.FreeStyleProject
 import javaposse.jobdsl.plugin.ExecuteDslScripts
 import jenkins.model.Jenkins

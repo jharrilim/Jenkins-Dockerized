@@ -1,4 +1,4 @@
-println 'Shared libraries are configured using JCasC now.'
+println 'Shared libraries are configured using JCasC now. Skipping...'
 return
 
 
