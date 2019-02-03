@@ -4,14 +4,13 @@ FROM jenkins/jenkins:lts
 # https://github.com/jenkinsci/configuration-as-code-plugin
 COPY JCasC/*.yaml /var/jcasc_configs/
 ENV CASC_JENKINS_CONFIG="/var/jcasc_configs"
-RUN /usr/local/bin/install-plugins.sh configuration-as-code
+RUN /usr/local/bin/install-plugins.sh configuration-as-code configuration-as-code-support
 
 ## Install other plugins
 RUN /usr/local/bin/install-plugins.sh \
     workflow-aggregator \
     # downgrade GitHub plugin https://issues.jenkins-ci.org/browse/JENKINS-54249
     github:1.29.2 \
-    job-dsl \
     blueocean
 
 ## Copy Groovy Hook Scripts

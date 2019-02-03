@@ -2,23 +2,3 @@ unclassified:
 
   location:
     url: "http://localhost:8080/"
-
-#   globalLibraries:
-#     libraries:
-#       - name: "my-shared-lib"
-#         defaultVersion: "master"
-#         implicit: true
-#         retriever:
-#           modernSCM:
-#             scm:
-#               github:
-#                 id: "8704a675-abdf-4574-bda3-ff9bec3c7730"
-#                 repoOwner: "poulad"
-#                 repository: "Jenkins-Pipeline-Tester"
-#                 traits:
-#                 - branchDiscoveryTrait:
-#                     strategyId: 1
-#                 - originPullRequestDiscoveryTrait:
-#                     strategyId: 1
-#                 - forkPullRequestDiscoveryTrait:
-#                     strategyId: 1

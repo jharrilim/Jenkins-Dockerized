@@ -1,3 +1,7 @@
+println 'Shared libraries are configured using JCasC now.'
+return
+
+
 import jenkins.model.Jenkins
 import jenkins.plugins.git.GitSCMSource
 import org.jenkinsci.plugins.workflow.libs.GlobalLibraries
