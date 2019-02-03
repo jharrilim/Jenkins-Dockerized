@@ -1,0 +1,29 @@
+{
+  "name": "jenkins-dockerized",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poulad/Jenkins-Dockerized.git"
+  },
+  "author": "Poulad Ashrafpour <poulad.pld@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poulad/Jenkins-Dockerized/issues"
+  },
+  "homepage": "https://github.com/poulad/Jenkins-Dockerized#readme",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/shelljs": "^0.8.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "localtunnel": "^1.9.1",
+    "shelljs": "^0.8.3"
+  }
+}
