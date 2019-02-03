@@ -20,7 +20,8 @@ idea {
 sourceSets {
     main {
         groovy {
-            srcDirs = ['src']
+            srcDirs { 'src' }
+            compileClasspath += main.compileClasspath
         }
     }
 }
@@ -28,8 +29,9 @@ sourceSets {
 sourceCompatibility = 1.8
 
 repositories {
-    maven { url 'http://repo.jenkins-ci.org/releases/' }
+    jcenter()
     mavenCentral()
+    maven { url 'https://repo.jenkins-ci.org/public/' }
 }
 
 dependencies {
@@ -49,6 +51,14 @@ dependencies {
     // Credentials
     compile group: 'org.jenkins-ci.plugins', name: 'credentials', version: '2.1.13', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'matrix-auth', version: '1.6', ext: 'jar'
+
+    // Multi-Branch Jobs
+    compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-multibranch', version: '2.20', ext: 'jar'
+    compile group: 'org.jenkins-ci.plugins', name: 'pipeline-multibranch-defaults', version: '2.0', ext: 'jar'
+
+    // JobDSL
+    compile group: 'org.jenkins-ci.plugins', name: 'job-dsl-core', version: '1.71', ext: 'jar'
+    compile group: 'org.jenkins-ci.plugins', name: 'job-dsl', version: '1.71', ext: 'jar'
 
     // SCMs
     compile group: 'org.jenkins-ci.plugins', name: 'scm-api', version: '2.3.0', ext: 'jar'
