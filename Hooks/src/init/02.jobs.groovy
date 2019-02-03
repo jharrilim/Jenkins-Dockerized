@@ -3,9 +3,15 @@ import org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition
 import org.jenkinsci.plugins.workflow.job.WorkflowJob
 
 def jobDSL="""
-node {
-    stage("test") {
-        foo 'Hello World'
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Calling the shared library...'
+                foo 'Hello World!'
+                step([\$class: 'GitHubSetCommitStatusBuilder'])
+        }
     }
 }
 """

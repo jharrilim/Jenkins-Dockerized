@@ -4,9 +4,10 @@
 ####################################################
 
 plugins:
-  required:
-    workflow-aggregator: 2.6
-    blueocean: 1.10.2
+  # required:
+  #   workflow-aggregator: 2.6
+  #   blueocean: 1.10.2
+  #   github: 1.29.2
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"

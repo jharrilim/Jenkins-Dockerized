@@ -49,10 +49,11 @@ dependencies {
     // Credentials
     compile group: 'org.jenkins-ci.plugins', name: 'credentials', version: '2.1.13', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'matrix-auth', version: '1.6', ext: 'jar'
-    
+
     // SCMs
     compile group: 'org.jenkins-ci.plugins', name: 'scm-api', version: '2.3.0', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'git', version: '3.9.3', ext: 'jar'
+    compile group: 'com.coravy.hudson.plugins.github', name: 'github', version: '1.29.3', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'github-api', version: '1.95', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'pipeline-github', version: '2.1', ext: 'jar'
     compile group: 'org.jenkins-ci.plugins', name: 'github-branch-source', version: '2.4.2', ext: 'jar'

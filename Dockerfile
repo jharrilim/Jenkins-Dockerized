@@ -9,6 +9,8 @@ RUN /usr/local/bin/install-plugins.sh configuration-as-code
 ## Install other plugins
 RUN /usr/local/bin/install-plugins.sh \
     workflow-aggregator \
+    # downgrade GitHub plugin https://issues.jenkins-ci.org/browse/JENKINS-54249
+    github:1.29.2 \
     blueocean
 
 ## Copy Groovy Hook Scripts
