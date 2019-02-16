@@ -2,29 +2,12 @@ version: '2'
 
 services:
 
-  # jenkins:
-  #   dockerfile: ./Dockerfile
-  #   context: .
-  #   ports:
-  #     - 8080:8080
-  #     - 50000:50000
-  #   networks:
-  #     - my-jenkins-network
-
-  localtunnel:
-    image: kaixhin/localtunnel
-    depends_on: 
-      - nginx
-    # command: 80 --local-host nginx --print-requests
-    entrypoint: lt --local-host nginx --port 80 --print-requests
-    networks:
-      - my-jenkins-network
-
-  nginx:
-    image: nginx
-    hostname: my-nginx
-    expose:
-      - 80
+  jenkins:
+    dockerfile: ./Dockerfile
+    context: .
+    ports:
+      - 8080:8080
+      - 50000:50000
     networks:
       - my-jenkins-network
 

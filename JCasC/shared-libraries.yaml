@@ -1,6 +1,7 @@
 unclassified:
   globalLibraries:
     libraries:
+
       - name: "my-shared-lib"
         defaultVersion: "master"
         implicit: true
@@ -9,14 +10,16 @@ unclassified:
         retriever:
           modernSCM:
             scm:
+              git:
+                remote: "https://github.com/poulad/Jenkins-Shared-Library.git"
+
+      - name: "my-shared-lib-github"
+        defaultVersion: "master"
+        includeInChangesets: true
+        allowVersionOverride: true
+        retriever:
+          modernSCM:
+            scm:
               github:
-                id: "8704a675-abdf-4574-bda3-ff9bec3c7730"
                 repoOwner: "poulad"
                 repository: "Jenkins-Shared-Library"
-                traits:
-                - branchDiscoveryTrait:
-                    strategyId: 1
-                - originPullRequestDiscoveryTrait:
-                    strategyId: 1
-                - forkPullRequestDiscoveryTrait:
-                    strategyId: 1

@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Calling the shared library...'
-                foo 'Hello World!'
+                script {
+                    echo 'Calling the shared library...'
+                    foo 'Hello World!'
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 /jenkins_home/
 # Auto-generated JCasC config
-/JCasC/_.yaml
+/JCasC/.gitignored.yaml
 
 ## Node.JS
 # https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore

@@ -1,10 +1,9 @@
 jobs:
   - script: >
-      multibranchPipelineJob('configuration-as-code2') {
-          branchSources {
-              git {
-                  id = 'configuration-as-code'
-                  remote('https://github.com/jenkinsci/configuration-as-code-plugin.git')
-              }
-          }
-      }
+        multibranchPipelineJob 'Sample Project', {
+            description 'A sample project to test my Jenkins shared library'
+            branchSources {
+                git { remote 'https://github.com/poulad/Jenkins-Sample-Project.git' }
+            }
+            triggers { periodic 60 }
+        }

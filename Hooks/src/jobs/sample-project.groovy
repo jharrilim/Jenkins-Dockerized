@@ -1,0 +1,7 @@
+multibranchPipelineJob 'Sample Project', {
+    description 'A sample project to test my Jenkins shared library'
+    branchSources {
+        git { remote 'https://github.com/poulad/Jenkins-Sample-Project.git' }
+    }
+    triggers { periodic 60 }
+}
