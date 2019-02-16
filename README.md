@@ -17,7 +17,7 @@ Use the CLI tool for automation:
     npm install
     ```
 
-1. Build the Docker image and start run a container named `jenkins`.
+1. Build the Docker image and run a container named `jenkins`.
 
     ```sh
     npm start
@@ -26,7 +26,7 @@ Use the CLI tool for automation:
 1. Wait for the Jenkins master to initialize.
 
     ```sh
-    # watch the container logs
+    # you can watch all the container logs
     docker logs --follow jenkins
 
     # or wait for this command to return
