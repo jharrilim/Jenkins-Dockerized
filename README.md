@@ -9,12 +9,32 @@
 
 ### Run
 
-```sh
-# restore dependency packages
-npm install
+Use the CLI tool for automation:
 
-npm start
-```
+1. Restore dependency packages.
+
+    ```sh
+    npm install
+    ```
+
+1. Build the Docker image and start run a container named `jenkins`.
+
+    ```sh
+    npm start
+    ```
+
+1. Wait for the Jenkins master to initialize.
+
+    ```sh
+    # watch the container logs
+    docker logs --follow jenkins
+
+    # or wait for this command to return
+    docker logs --follow jenkins 2>&1 | \
+    grep --max-count=1 --before-context=1 "Jenkins is fully up and running"
+    ```
+
+1. Hit [http://localhost:8080](http://localhost:8080)
 
 ## Repository Structure
 
