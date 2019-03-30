@@ -1,0 +1,12 @@
+jenkins:
+  securityRealm:
+    ldap:
+      configurations:
+      - server: openldap
+        rootDN: "dc=example,dc=org"
+        managerDN: "cn=admin,dc=example,dc=org"
+        managerPasswordSecret: ${LDAP_PASSWORD:-password}
+        displayNameAttributeName: cn
+        userSearch: "cn={0}"
+      disableMailAddressResolver: true
+      disableRolePrefixing: true

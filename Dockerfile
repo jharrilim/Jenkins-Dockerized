@@ -8,9 +8,12 @@ RUN /usr/local/bin/install-plugins.sh configuration-as-code configuration-as-cod
 
 ## Install other plugins
 RUN /usr/local/bin/install-plugins.sh \
+    role-strategy \
+    ldap \
     workflow-aggregator \
     # downgrade GitHub plugin https://issues.jenkins-ci.org/browse/JENKINS-54249
-    github:1.29.2 \
+    # github:1.29.2 \
+    github \
     job-dsl \
     blueocean
 

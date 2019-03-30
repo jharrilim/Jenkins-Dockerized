@@ -3,11 +3,22 @@ version: '2'
 services:
 
   jenkins:
-    dockerfile: ./Dockerfile
-    context: .
+    build:
+      dockerfile: ./Dockerfile
+      context: .
     ports:
       - 8080:8080
       - 50000:50000
+    networks:
+      - my-jenkins-network
+
+  openldap:
+    image: osixia/openldap
+    environment:
+      - LDAP_ADMIN_PASSWORD=password
+    ports:
+      - 389:389
+      - 636:636
     networks:
       - my-jenkins-network
 

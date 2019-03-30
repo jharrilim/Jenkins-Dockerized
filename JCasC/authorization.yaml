@@ -1,0 +1,41 @@
+jenkins:
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+
+          - name: admin
+            description: Jenkins administrators
+            permissions:
+              - Overall/Administer
+            assignments:
+              - admin
+
+          - name: readonly
+            description: Read-only users
+            permissions:
+              - Overall/Read
+              - Job/Read
+            assignments:
+              - chris
+
+        items:
+
+          - name: My Projects
+            description: "Jobs in Folder A, but not the folder itself"
+            pattern: "My Projects/.*"
+            permissions:
+              - Job/Configure
+              - Job/Build
+              - Job/Delete
+            assignments:
+              - alice
+
+          - name: Health Checks
+            description: "Jobs in Folder B, but not the folder itself"
+            pattern: "Health Checks.*"
+            permissions:
+              - Job/Configure
+              - Job/Build
+            assignments:
+              - bob
